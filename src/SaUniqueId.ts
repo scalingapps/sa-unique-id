@@ -1,4 +1,6 @@
-import { SaUniqueIdInterface } from './index.d'
+export interface SaUniqueIdInterface {
+	id(): string
+}
 
 export class SaUniqueId implements SaUniqueIdInterface {
 	id(): string {

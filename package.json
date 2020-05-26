@@ -1,9 +1,9 @@
 {
 	"name": "sa-unique-id",
-	"version": "0.6.0",
+	"version": "0.7.1",
 	"description": "A simple unique id generator that produce a unique id that is 23 chars/bytes long",
 	"main": "lib/index.js",
-	"types": "src/index.d.ts",
+	"types": "types/index.d.ts",
 	"scripts": {
 		"build": "tsc",
 		"test": "karma start"
