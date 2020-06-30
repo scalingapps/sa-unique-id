@@ -8,12 +8,21 @@ export class SaUniqueId implements SaUniqueIdInterface {
 		if (ms.length < 13) {
 			ms = ms.padEnd(13, '0');
 		}
-		const array: Uint32Array = new Uint32Array(1);
-		window.crypto.getRandomValues(array);
-		let str: string = '' + array[0];
+
+		let str: string = '';
+		if (typeof window !== 'undefined' && window.crypto && window.crypto.getRandomValues) {
+			const array: Uint32Array = new Uint32Array(1);
+			window.crypto.getRandomValues(array);
+			str = array[0].toString();
+		} else {
+			// must be node 
+			str = require('crypto').randomBytes(5).toString('hex');
+		}
+
 		if (str.length < 10) {
 			str = str.padStart(10, '0');
 		}
+
 		return `${ ms }${ str }`;
 	}
 }
