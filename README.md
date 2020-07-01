@@ -4,7 +4,10 @@ A simple unique id generator that produce a unique id that is 23 chars/bytes lon
 # code base
 TypeScript
 
-# example vanilla JS (node)
+# main method
+id()
+
+# example using vanilla JS (node)
 
 ```
 const { SaUniqueId } = require('./lib/index');
