@@ -1,5 +1,7 @@
-import { SaUniqueId } from './SaUniqueId'
+// import {SaUniqueId} from './SaUniqueId';
 
-export = {
-	SaUniqueId: SaUniqueId
-}
+// export = {
+//   SaUniqueId: SaUniqueId,
+// };
+
+export * from "./SaUniqueId";

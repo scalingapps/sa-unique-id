@@ -1,26 +1,24 @@
 {
 	"name": "sa-unique-id",
-	"version": "0.8.0",
+	"version": "0.8.3",
 	"description": "A simple unique id generator that produce a unique id that is 23 chars/bytes long",
 	"main": "lib/index.js",
-	"types": "types/index.d.ts",
+	"types": "lib/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"test": "karma start"
+		"build-tests": "TS_NODE_PROJECT='./tsconfig.tests.json' tsc",
+		"test": "TS_NODE_PROJECT='./tsconfig.tests.json' mocha -r ts-node/register tests/**/*.spec.ts"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"tslib": "^2.0.0"
+	},
 	"devDependencies": {
 		"@types/chai": "^4.2.11",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^14.0.14",
 		"chai": "^4.2.0",
-		"karma": "^5.0.9",
-		"karma-chrome-launcher": "^3.1.0",
-		"karma-cli": "^2.0.0",
-		"karma-mocha": "^2.0.1",
-		"karma-spec-reporter": "0.0.32",
-		"karma-typescript": "^5.0.3",
 		"mocha": "^7.2.0",
+		"ts-node": "^8.10.2",
 		"typescript": "^3.9.3"
 	},
 	"repository": {
