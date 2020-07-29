@@ -1,7 +1,7 @@
 export interface SaUniqueIdInterface {
-  id(): string;
+    id(): string;
 }
 export declare class SaUniqueId implements SaUniqueIdInterface {
-  id(): string;
+    id(): string;
 }
 export declare const saUniqueId: SaUniqueId;
