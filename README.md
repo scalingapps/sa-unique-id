@@ -11,11 +11,23 @@ id()
 
 ```
 const { SaUniqueId } = require('./lib/index');
-const saUniqueId = new SaUniqueId();
+console.log('unique id', SaUniqueId.id());
+console.log('unique id', SaUniqueId.id());
+console.log('unique id', SaUniqueId.id());
+console.log('unique id', SaUniqueId.id());
+console.log('unique id', SaUniqueId.id());
+```
 
-console.log('unique id', saUniqueId.id());
-console.log('unique id', saUniqueId.id());
-console.log('unique id', saUniqueId.id());
-console.log('unique id', saUniqueId.id());
-console.log('unique id', saUniqueId.id());
+# example using vanilla js (browser)
+```
+const SaUniqueId = Sa.SaUniqueId;
+console.log('SaUniqueId.id() sample output:');
+console.log('id', SaUniqueId.id());
+```
+
+# example using TypeScript
+```
+import { SaUniqueId } from 'SaUniqueId'
+console.log('SaUniqueId.id() sample output:')
+console.log('id', SaUniqueId.id())
 ```

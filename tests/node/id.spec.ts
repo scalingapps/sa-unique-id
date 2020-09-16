@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { saUniqueId } from '../src/SaUniqueId'
+import { SaUniqueId } from '../../src/SaUniqueId.node'
 
 import { UnderLog, StdErrTransport } from 'underlog'
 const stdErrTransport = new StdErrTransport({
@@ -13,7 +13,7 @@ const logger: UnderLog = new UnderLog({
 describe('SaUniqueId', () => {
   describe('id', () => {
     it('should return id as a string with length 23', () => {
-      const result = saUniqueId.id()
+      const result = SaUniqueId.id()
       expect(result.toString().length).to.equal(23)
       expect(result).to.be.a('string')
     })
@@ -22,11 +22,11 @@ describe('SaUniqueId', () => {
       const results: string[] = []
       const howMany: number = 1000
       for (let i = 0; i < howMany; i++) {
-        results.push(saUniqueId.id())
+        results.push(SaUniqueId.id())
       }
       expect(results.length).to.equal(howMany)
       results.forEach((result: string) => {
-        logger.info(`result ${ result }`)
+        logger.info(`result ${result}`)
         expect(result.toString().length).to.equal(23)
         expect(result).to.be.a('string')
       })

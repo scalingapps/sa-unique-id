@@ -1,1 +1,1 @@
-export * from './SaUniqueId';
+export * from './SaUniqueId.interface';
