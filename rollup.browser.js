@@ -4,10 +4,10 @@ import commonjs from 'rollup-plugin-commonjs'
 
 export default [
   {
-    input: 'lib/SaUniqueId.browser.js',
+    input: 'lib/SaUniqueId.js',
     output: {
       name: 'Sa',
-      file: 'lib/browser.min.js',
+      file: 'lib/index.min.js',
       format: 'iife',
       sourcemap: false,
     },

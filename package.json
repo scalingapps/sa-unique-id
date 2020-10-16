@@ -1,6 +1,6 @@
 {
 	"name": "sa-unique-id",
-	"version": "1.1.1",
+	"version": "1.1.5",
 	"description": "A simple unique id generator that produce a unique id that is 23 chars/bytes long",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
@@ -28,8 +28,7 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"ts-node": "^8.10.2",
 		"tsconfig-paths": "^3.9.0",
-		"typescript": "^3.9.3",
-		"underlog": "^0.9.1"
+		"typescript": "^3.9.3"
 	},
 	"repository": {
 		"type": "git",
